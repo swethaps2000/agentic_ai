@@ -21,7 +21,7 @@ import numpy as np
 # ----------------------------
 # CONFIG
 # ----------------------------
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY", "AIzaSyDOal5Wb5J49UxtZqNA8rrmkm-B0N25IPU")
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 client = MongoClient(os.environ.get("MONGO_URI", "mongodb://localhost:27017/"))
 db = client['finance_app']
 income = db["income"]

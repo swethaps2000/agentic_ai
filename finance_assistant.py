@@ -17,10 +17,8 @@ from typing import Optional, Tuple
 
 
 # Correct: must be GOOGLE_API_KEY
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY", "AIzaSyBhLq6uZ-Q3HChLQ7HFuFaqFdCIkqGOAt4")
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
-if not os.environ.get("GOOGLE_API_KEY"):
-    os.environ["GOOGLE_API_KEY"] = "AIzaSyBhLq6uZ-Q3HChLQ7HFuFaqFdCIkqGOAt4" 
 # MONGO_URI ="mongodb://localhost:27017/"
 client = MongoClient(os.environ.get("MONGO_URI", "mongodb://localhost:27017/"))
 db = client['finance_app']
